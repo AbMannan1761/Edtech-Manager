@@ -189,7 +189,7 @@ export const SettingsView = () => {
             </div>
 
             <div style={{ fontSize: '0.85rem', lineHeight: '1.8' }}>
-              <div>সেন্ডার আইডি: <strong>ABM Info Tech</strong></div>
+              <div>সেন্ডার আইডি: <strong>Edtech Manager</strong></div>
               <div>সার্ভিস প্রোভাইডার: <strong>Teletalk / SSL Wireless</strong></div>
               <div>ব্যালেন্স সতর্কতা লিমিট: <strong>৫০ SMS</strong></div>
             </div>

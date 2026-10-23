@@ -1,7 +1,7 @@
 export const translations = {
   bn: {
     // Brand & Topbar
-    brandName: "ABM Info Tech",
+    brandName: "Edtech Manager",
     brandTagline: "কোচিং ম্যানেজমেন্ট সিস্টেম",
     branchName: "মেইন ব্রাঞ্চ, ঢাকা",
     sessionYear: "সেশন: ২০২৬",
@@ -167,7 +167,7 @@ export const translations = {
   },
   en: {
     // Brand & Topbar
-    brandName: "ABM Info Tech",
+    brandName: "Edtech Manager",
     brandTagline: "Coaching Management System",
     branchName: "Main Branch, Dhaka",
     sessionYear: "Session: 2026",

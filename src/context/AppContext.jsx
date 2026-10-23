@@ -186,7 +186,7 @@ export const AppProvider = ({ children }) => {
       sendSms({
         recipient: `${record.phone} (${record.studentName})`,
         type: language === 'bn' ? 'ফি রসিদ' : 'Fee Receipt',
-        message: `ABM Info Tech: ${record.studentName} এর ${record.month} ফি ৳${record.paidAmount} টাকা সফলভাবে জমা হয়েছে। রসিদ: ${receiptNo}। ধন্যবাদ।`,
+        message: `Edtech Manager: ${record.studentName} এর ${record.month} ফি ৳${record.paidAmount} টাকা সফলভাবে জমা হয়েছে। রসিদ: ${receiptNo}। ধন্যবাদ।`,
         cost: '৳ 0.40'
       });
     }

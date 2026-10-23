@@ -104,7 +104,7 @@ export const Dashboard = () => {
       <div className="page-header">
         <div className="page-title-group">
           <h1>
-            <span>ABM Info Tech অ্যাডমিন ড্যাশবোর্ড</span>
+            <span>Edtech Manager অ্যাডমিন ড্যাশবোর্ড</span>
             <Sparkles size={22} color="#F59E0B" />
           </h1>
           <p>কোচিং সেন্টারের দৈনন্দিন কার্যক্রম, আয়-ব্যয় এবং ক্লাসের সামগ্রিক চিত্র</p>

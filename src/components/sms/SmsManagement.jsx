@@ -27,7 +27,7 @@ export const SmsManagement = () => {
   const [customPhone, setCustomPhone] = useState('');
   const [selectedTemplate, setSelectedTemplate] = useState('attendance');
   const [messageBody, setMessageBody] = useState(
-    'ABM Info Tech: প্রিয় অভিভাবক, আপনার সন্তান আজ ক্লাসে অনুপস্থিত ছিল। ক্লাসে নিয়মিত উপস্থিতি কাম্য।'
+    'Edtech Manager: প্রিয় অভিভাবক, আপনার সন্তান আজ ক্লাসে অনুপস্থিত ছিল। ক্লাসে নিয়মিত উপস্থিতি কাম্য।'
   );
   const [sendSuccessNotice, setSendSuccessNotice] = useState(false);
 
@@ -35,13 +35,13 @@ export const SmsManagement = () => {
   const handleTemplateChange = (tmpl) => {
     setSelectedTemplate(tmpl);
     if (tmpl === 'attendance') {
-      setMessageBody('ABM Info Tech: প্রিয় অভিভাবক, আপনার সন্তান আজ ক্লাসে অনুপস্থিত ছিল। ক্লাসে নিয়মিত উপস্থিতি কাম্য।');
+      setMessageBody('Edtech Manager: প্রিয় অভিভাবক, আপনার সন্তান আজ ক্লাসে অনুপস্থিত ছিল। ক্লাসে নিয়মিত উপস্থিতি কাম্য।');
     } else if (tmpl === 'due') {
-      setMessageBody('ABM Info Tech: সম্মানিত অভিভাবক, আপনার সন্তানের চলতি মাসের কোচিং ফি বাবদ বেতন বকেয়া রয়েছে। দ্রুত পরিশোধের অনুরোধ রইল।');
+      setMessageBody('Edtech Manager: সম্মানিত অভিভাবক, আপনার সন্তানের চলতি মাসের কোচিং ফি বাবদ বেতন বকেয়া রয়েছে। দ্রুত পরিশোধের অনুরোধ রইল।');
     } else if (tmpl === 'exam') {
-      setMessageBody('ABM Info Tech: আগামী সোমবার মাসিক মডেল টেস্ট অনুষ্ঠিত হবে। সকল শিক্ষার্থীকে নির্ধারিত সময়ে উপস্থিত হতে বলা হচ্ছে।');
+      setMessageBody('Edtech Manager: আগামী সোমবার মাসিক মডেল টেস্ট অনুষ্ঠিত হবে। সকল শিক্ষার্থীকে নির্ধারিত সময়ে উপস্থিত হতে বলা হচ্ছে।');
     } else if (tmpl === 'holiday') {
-      setMessageBody('ABM Info Tech: পবিত্র শবে বরাত উপলক্ষে আগামীকাল কোচিং এর সকল ক্লাস বন্ধ থাকবে। পরশুদিন থেকে যথারীতি ক্লাস চলবে।');
+      setMessageBody('Edtech Manager: পবিত্র শবে বরাত উপলক্ষে আগামীকাল কোচিং এর সকল ক্লাস বন্ধ থাকবে। পরশুদিন থেকে যথারীতি ক্লাস চলবে।');
     } else {
       setMessageBody('');
     }
@@ -297,7 +297,7 @@ export const SmsManagement = () => {
               </span>
             </div>
             <div style={{ fontSize: '0.85rem', lineHeight: '1.8' }}>
-              <div>সেন্ডার আইডি: <strong>ABM Info Tech</strong> (অনুমোদিত)</div>
+              <div>সেন্ডার আইডি: <strong>Edtech Manager</strong> (অনুমোদিত)</div>
               <div>গেটওয়ে স্ট্যাটাস: <span className="status-pill active">সক্রিয় ও লাইভ</span></div>
               <div>মাস্কিং টাইপ: <strong>নন-মাস্কিং ও বাল্ক ব্রডকাস্ট</strong></div>
               <div>অটো এসএমএস: <strong>হাজিরা ও ফি রসিদ ইন্টিগ্রেটেড</strong></div>

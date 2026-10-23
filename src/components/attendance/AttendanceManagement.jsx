@@ -77,7 +77,7 @@ export const AttendanceManagement = () => {
           sendSms({
             recipient: `${s.guardianPhone} (${s.name})`,
             type: 'অনুপস্থিতি অ্যালার্ট',
-            message: `ABM Info Tech: সম্মানিত অভিভাবক, আপনার সন্তান ${s.name} (রোল ${s.roll}) আজ ${selectedDate} তারিখে ${batchName} ক্লাসে অনুপস্থিত ছিল।`,
+            message: `Edtech Manager: সম্মানিত অভিভাবক, আপনার সন্তান ${s.name} (রোল ${s.roll}) আজ ${selectedDate} তারিখে ${batchName} ক্লাসে অনুপস্থিত ছিল।`,
             cost: '৳ 0.40'
           });
         }

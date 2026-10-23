@@ -274,7 +274,7 @@ export const initialSmsLogs = [
     id: "SMS-501",
     recipient: "01788-990022 (তানভীর হাসান)",
     type: "হাজিরা অ্যালার্ট",
-    message: "ABM Info Tech: প্রিয় অভিভাবক, আপনার সন্তান তানভীর হাসান আজ (১৪/০৩/২৬) ক্লাসে অনুপস্থিত ছিল।",
+    message: "Edtech Manager: প্রিয় অভিভাবক, আপনার সন্তান তানভীর হাসান আজ (১৪/০৩/২৬) ক্লাসে অনুপস্থিত ছিল।",
     date: "2026-03-14 10:15 AM",
     status: "Delivered",
     cost: "৳ 0.40"
@@ -283,7 +283,7 @@ export const initialSmsLogs = [
     id: "SMS-502",
     recipient: "01819-876543 (আবরার ফাইয়াজ)",
     type: "ফি প্রাপ্তি রসিদ",
-    message: "ABM Info Tech: আবরার ফাইয়াজ এর মার্চ মাসের ফি বাবদ ৳১৫০০ টাকা সফলভাবে জমা হয়েছে। রসিদ নং: REC-2026-1001। ধন্যবাদ।",
+    message: "Edtech Manager: আবরার ফাইয়াজ এর মার্চ মাসের ফি বাবদ ৳১৫০০ টাকা সফলভাবে জমা হয়েছে। রসিদ নং: REC-2026-1001। ধন্যবাদ।",
     date: "2026-03-05 02:30 PM",
     status: "Delivered",
     cost: "৳ 0.40"
@@ -292,7 +292,7 @@ export const initialSmsLogs = [
     id: "SMS-503",
     recipient: "Batch: HSC 26 Physics (২৮ জন)",
     type: "ক্লাস শিডিউল",
-    message: "ABM Info Tech: আগামীকাল সোমবার এইচএসসি পদার্থবিজ্ঞান ক্লাসে চ্যাপ্টার ৩ এর উপর বিশেষ পরীক্ষা অনুষ্ঠিত হবে। সময় বিকাল ৪:০০।",
+    message: "Edtech Manager: আগামীকাল সোমবার এইচএসসি পদার্থবিজ্ঞান ক্লাসে চ্যাপ্টার ৩ এর উপর বিশেষ পরীক্ষা অনুষ্ঠিত হবে। সময় বিকাল ৪:০০।",
     date: "2026-03-12 06:00 PM",
     status: "Delivered",
     cost: "৳ 11.20"
@@ -364,10 +364,10 @@ export const initialTeachers = [
 ];
 
 export const initialSettings = {
-  coachingName: "ABM Info Tech একাডেমি ও কোচিং সেন্টার",
-  coachingNameEn: "ABM Info Tech Academy & Coaching Center",
+  coachingName: "Edtech Manager একাডেমি ও কোচিং সেন্টার",
+  coachingNameEn: "Edtech Manager Academy & Coaching Center",
   phone: "+880 1712-345678",
-  email: "contact@abminfotech.com",
+  email: "contact@edtechmanager.com",
   address: "বাড়ি নং ১২, রোড নং ৪, সেক্টর ৯, উত্তরা, ঢাকা - ১২৩০",
   established: "2020",
   currentPlan: "Standard Plan (৳৩০০/মাসিক)",
