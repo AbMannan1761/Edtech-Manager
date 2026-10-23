@@ -99,6 +99,14 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem('eduone_attendance', JSON.stringify(attendance));
   }, [attendance]);
 
+  useEffect(() => {
+    if (idCardStudent || receiptToPrint) {
+      document.body.classList.add('has-print-modal');
+    } else {
+      document.body.classList.remove('has-print-modal');
+    }
+  }, [idCardStudent, receiptToPrint]);
+
   const toggleLanguage = () => {
     setLanguage(prev => (prev === 'bn' ? 'en' : 'bn'));
   };

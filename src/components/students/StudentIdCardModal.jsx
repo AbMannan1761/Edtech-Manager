@@ -8,9 +8,9 @@ export const StudentIdCardModal = () => {
   if (!idCardStudent) return null;
 
   return (
-    <div className="modal-backdrop">
-      <div className="modal-content" style={{ maxWidth: '440px' }}>
-        <div className="modal-header">
+    <div className="modal-backdrop print-modal-backdrop">
+      <div className="modal-content print-modal-content" style={{ maxWidth: '440px' }}>
+        <div className="modal-header no-print">
           <h3>
             <BookOpen size={20} color="var(--primary-500)" />
             শিক্ষার্থী ডিজিটাল আইডি কার্ড
@@ -151,7 +151,7 @@ export const StudentIdCardModal = () => {
           </div>
         </div>
 
-        <div className="modal-footer">
+        <div className="modal-footer no-print">
           <button className="btn btn-secondary" onClick={() => setIdCardStudent(null)}>
             বন্ধ করুন
           </button>

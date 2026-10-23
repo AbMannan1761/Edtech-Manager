@@ -1161,24 +1161,204 @@ button, input, select, textarea, optgroup, div, span, p, h1, h2, h3, h4, h5, h6,
   padding-top: 6px;
 }
 
+/* ==========================================================================
+   Print Stylesheet
+   ========================================================================== */
+
+@page {
+  size: auto;
+  margin: 10mm 12mm;
+}
+
 @media print {
-  body * {
-    visibility: hidden;
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-  .money-receipt-sheet,
-  .money-receipt-sheet * {
-    visibility: visible;
+
+  html, body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
   }
-  .money-receipt-sheet {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    border: none;
-    padding: 0;
-  }
-  .no-print {
+
+  /* Hide interactive, navigational and floating UI */
+  .no-print,
+  .sidebar,
+  .top-navbar,
+  .modal-close-btn,
+  .nav-icon-btn,
+  .badge-counter,
+  .role-pill,
+  .btn,
+  .page-actions,
+  .quick-actions,
+  .global-search,
+  .pagination-controls,
+  .branch-dot,
+  .toast-container {
     display: none !important;
+  }
+
+  /* Unconstrain app layout for full page printing */
+  .app-container {
+    display: block !important;
+    min-height: auto !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .page-body {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* Page Header */
+  .page-header {
+    margin-bottom: 20px !important;
+    border-bottom: 2px solid #E5E7EB !important;
+    padding-bottom: 12px !important;
+  }
+
+  .page-header h1 {
+    font-size: 18pt !important;
+    color: #111827 !important;
+  }
+
+  .page-header p {
+    font-size: 10pt !important;
+    color: #4B5563 !important;
+  }
+
+  /* Grid containers & cards */
+  .stats-grid,
+  .analytics-grid,
+  .attendance-summary-cards {
+    display: grid !important;
+    gap: 12px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 16px !important;
+  }
+
+  .stat-card,
+  .card,
+  .panel {
+    background: #ffffff !important;
+    border: 1px solid #D1D5DB !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    padding: 12px !important;
+    color: #111827 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 14px !important;
+  }
+
+  .stat-card .stat-value {
+    color: #111827 !important;
+  }
+
+  /* Tables formatting */
+  .table-responsive {
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  table.data-table,
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 10px !important;
+  }
+
+  table.data-table th,
+  table.data-table td,
+  table th,
+  table td {
+    border: 1px solid #D1D5DB !important;
+    padding: 8px 10px !important;
+    color: #111827 !important;
+    background: transparent !important;
+    font-size: 9.5pt !important;
+  }
+
+  table.data-table th,
+  table th {
+    background-color: #F3F4F6 !important;
+    font-weight: 700 !important;
+  }
+
+  /* When a Print Modal is Open (Receipt / ID Card / Merit List) */
+  body:has(.print-modal-backdrop) .main-content > *:not(.print-modal-backdrop),
+  body:has(.print-modal-backdrop) .page-body,
+  body.has-print-modal .main-content > *:not(.print-modal-backdrop),
+  body.has-print-modal .page-body {
+    display: none !important;
+  }
+
+  .modal-backdrop.print-modal-backdrop {
+    position: static !important;
+    background: transparent !important;
+    inset: auto !important;
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    z-index: auto !important;
+  }
+
+  .modal-content.print-modal-content {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .print-modal-content .modal-header,
+  .print-modal-content .modal-footer,
+  .print-modal-content .modal-close-btn {
+    display: none !important;
+  }
+
+  .print-modal-content .modal-body {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Money Receipt Print Specifics */
+  .money-receipt-sheet {
+    border: 2px solid #1F2937 !important;
+    padding: 20px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  /* Student ID Card Print Specifics */
+  #student-id-card {
+    margin: 40px auto !important;
+    box-shadow: none !important;
+    border: 1px solid #4338CA !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
 

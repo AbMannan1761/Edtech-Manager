@@ -8,8 +8,8 @@ export const MoneyReceiptModal = () => {
   if (!receiptToPrint) return null;
 
   return (
-    <div className="modal-backdrop">
-      <div className="modal-content" style={{ maxWidth: '780px' }}>
+    <div className="modal-backdrop print-modal-backdrop">
+      <div className="modal-content print-modal-content" style={{ maxWidth: '780px' }}>
         <div className="modal-header no-print">
           <h3>
             <BookOpen size={20} color="var(--primary-500)" />

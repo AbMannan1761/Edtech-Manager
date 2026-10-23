@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import {
   Award,
@@ -24,6 +24,14 @@ export const ExamManagement = () => {
   const [isNewExamModalOpen, setIsNewExamModalOpen] = useState(false);
   const [activeExamForMarks, setActiveExamForMarks] = useState(null);
   const [activeExamForResults, setActiveExamForResults] = useState(null);
+
+  useEffect(() => {
+    if (activeExamForResults) {
+      document.body.classList.add('has-print-modal');
+    } else {
+      document.body.classList.remove('has-print-modal');
+    }
+  }, [activeExamForResults]);
 
   // New Exam Form
   const [newExam, setNewExam] = useState({
@@ -360,8 +368,8 @@ export const ExamManagement = () => {
 
       {/* Modal: View Results / Merit List */}
       {activeExamForResults && (
-        <div className="modal-backdrop">
-          <div className="modal-content" style={{ maxWidth: '680px' }}>
+        <div className="modal-backdrop print-modal-backdrop">
+          <div className="modal-content print-modal-content" style={{ maxWidth: '680px' }}>
             <div className="modal-header">
               <div>
                 <h3 style={{ fontSize: '1.2rem' }}>ফলাফল ও মেধা তালিকা (Merit List)</h3>
@@ -369,7 +377,7 @@ export const ExamManagement = () => {
                   {activeExamForResults.title} • পূর্ণমান: {activeExamForResults.totalMarks}
                 </div>
               </div>
-              <button className="modal-close-btn" onClick={() => setActiveExamForResults(null)}>
+              <button className="modal-close-btn no-print" onClick={() => setActiveExamForResults(null)}>
                 <X size={20} />
               </button>
             </div>
@@ -440,7 +448,7 @@ export const ExamManagement = () => {
               </div>
             </div>
 
-            <div className="modal-footer">
+            <div className="modal-footer no-print">
               <button className="btn btn-secondary" onClick={() => setActiveExamForResults(null)}>
                 বন্ধ করুন
               </button>
