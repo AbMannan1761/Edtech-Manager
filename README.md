@@ -70,8 +70,8 @@
 
 ### ১. রিপোজিটরি ক্লোন করুন
 ```bash
-git clone https://github.com/AbMannan1761/coaching-management-system.git
-cd coaching-management-system
+git clone https://github.com/AbMannan1761/Edtech-Manager.git
+cd Edtech-Manager
 ```
 
 ### ২. ডিপেন্ডেন্সি ইন্সটল করুন
