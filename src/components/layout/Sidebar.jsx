@@ -45,7 +45,7 @@ export const Sidebar = () => {
       id: 'batches',
       label: t('navBatches'),
       icon: Layers,
-      badge: batches.length
+      badge: batches.filter(b => b.status !== 'archived').length
     },
     {
       id: 'attendance',

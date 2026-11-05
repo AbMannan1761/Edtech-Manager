@@ -98,6 +98,15 @@ export const translations = {
     colSeatLimit: "সর্বোচ্চ আসন",
     batchStatusOpen: "ভর্তি চলছে",
     batchStatusFull: "আসন পূর্ণ",
+    batchStatusArchived: "আর্কাইভকৃত",
+    allBatchesFilter: "সকল ব্যাচ",
+    activeBatchesFilter: "চলমান ব্যাচ",
+    archivedBatchesFilter: "আর্কাইভকৃত ব্যাচ",
+    archiveBatch: "আর্কাইভ করুন",
+    unarchiveBatch: "পুনরুদ্ধার করুন",
+    deleteBatch: "ডিলিট করুন",
+    deleteBatchConfirmTitle: "ব্যাচ ডিলিট নিশ্চিতকরণ",
+    archiveBatchConfirmTitle: "ব্যাচ আর্কাইভ নিশ্চিতকরণ",
 
     // Attendance Module
     attendanceTitle: "দৈনিক ব্যাচভিত্তিক হাজিরা",
@@ -264,6 +273,15 @@ export const translations = {
     colSeatLimit: "Max Capacity",
     batchStatusOpen: "Admissions Open",
     batchStatusFull: "Seats Full",
+    batchStatusArchived: "Archived",
+    allBatchesFilter: "All Batches",
+    activeBatchesFilter: "Active Batches",
+    archivedBatchesFilter: "Archived Batches",
+    archiveBatch: "Archive",
+    unarchiveBatch: "Restore",
+    deleteBatch: "Delete",
+    deleteBatchConfirmTitle: "Confirm Batch Deletion",
+    archiveBatchConfirmTitle: "Confirm Batch Archive",
 
     // Attendance Module
     attendanceTitle: "Batch Attendance",

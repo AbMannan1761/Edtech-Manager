@@ -166,6 +166,38 @@ export const AppProvider = ({ children }) => {
     return newBatch;
   };
 
+  const deleteBatch = (batchId) => {
+    setBatches(prev => prev.filter(b => b.id !== batchId));
+    // Unlink any students belonging to this batch
+    setStudents(prev =>
+      prev.map(s => {
+        if (s.batchId === batchId) {
+          return {
+            ...s,
+            batchId: '',
+            batchName: language === 'bn' ? 'নির্ধারিত নেই' : 'Unassigned'
+          };
+        }
+        return s;
+      })
+    );
+  };
+
+  const toggleArchiveBatch = (batchId) => {
+    setBatches(prev =>
+      prev.map(b => {
+        if (b.id === batchId) {
+          const nextStatus = b.status === 'archived' ? 'active' : 'archived';
+          return {
+            ...b,
+            status: nextStatus
+          };
+        }
+        return b;
+      })
+    );
+  };
+
   // Fee Collection Actions
   const addFeeRecord = (record) => {
     const receiptNo = `REC-2026-${1000 + feeRecords.length + 1}`;
@@ -275,6 +307,8 @@ export const AppProvider = ({ children }) => {
         addStudent,
         deleteStudent,
         addBatch,
+        deleteBatch,
+        toggleArchiveBatch,
         addFeeRecord,
         saveAttendanceBatch,
         sendSms,

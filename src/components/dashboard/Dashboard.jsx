@@ -48,7 +48,7 @@ export const Dashboard = () => {
     },
     {
       title: t('activeBatches'),
-      value: `${batches.length}টি ব্যাচ`,
+      value: `${batches.filter(b => b.status !== 'archived').length}টি ব্যাচ`,
       trend: '৫টি ক্লাসরুম',
       isPositive: true,
       icon: Layers,
@@ -254,7 +254,7 @@ export const Dashboard = () => {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {batches.slice(0, 3).map((b, i) => (
+            {batches.filter(b => b.status !== 'archived').slice(0, 3).map((b, i) => (
               <div
                 key={i}
                 style={{
