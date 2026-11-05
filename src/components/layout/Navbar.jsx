@@ -12,7 +12,8 @@ import {
   ChevronDown,
   Sparkles,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  LogIn
 } from 'lucide-react';
 
 export const Navbar = () => {
@@ -26,6 +27,9 @@ export const Navbar = () => {
     settings,
     t,
     setIsRegisterModalOpen,
+    setIsLoginModalOpen,
+    isLoggedIn,
+    currentUser,
     students,
     mobileSidebarOpen,
     setMobileSidebarOpen
@@ -138,6 +142,21 @@ export const Navbar = () => {
             </div>
           )}
         </div>
+
+        {/* Login Button (User requested location) */}
+        <button
+          className={`btn btn-sm ${isLoggedIn ? 'btn-secondary' : 'btn-primary'}`}
+          onClick={() => setIsLoginModalOpen(true)}
+          title={isLoggedIn ? (language === 'bn' ? `লগইনকৃত: ${currentUser?.name || ''}` : `Logged in as: ${currentUser?.name || ''}`) : (language === 'bn' ? 'লগ ইন করুন' : 'Log In')}
+          style={{
+            gap: '6px',
+            fontSize: '0.82rem',
+            padding: '7px 14px'
+          }}
+        >
+          <LogIn size={15} />
+          <span>{t('login')}</span>
+        </button>
 
         {/* Language Toggle (Bangla / English) */}
         <button

@@ -24,6 +24,9 @@ export const Sidebar = () => {
     t,
     currentRole,
     settings,
+    currentUser,
+    isLoggedIn,
+    setIsLoginModalOpen,
     mobileSidebarOpen,
     setMobileSidebarOpen
   } = useApp();
@@ -131,20 +134,25 @@ export const Sidebar = () => {
 
       {/* Footer Profile Box */}
       <div className="sidebar-footer">
-        <div className="user-profile-widget">
+        <div
+          className="user-profile-widget"
+          onClick={() => setIsLoginModalOpen(true)}
+          style={{ cursor: 'pointer' }}
+          title="লগইন অ্যাকাউন্ট পরিবর্তন বা পরিচালনা করুন"
+        >
           <div className="avatar-circle">
-            {currentRole === 'admin' ? 'এড' : currentRole === 'teacher' ? 'টি' : 'শি'}
+            {currentUser?.avatar || (currentRole === 'admin' ? 'এড' : currentRole === 'teacher' ? 'টি' : 'শি')}
           </div>
           <div className="user-info">
             <span className="user-name">
-              {currentRole === 'admin'
+              {currentUser?.name || (currentRole === 'admin'
                 ? 'জাহিদ হাসান (অ্যাডমিন)'
                 : currentRole === 'teacher'
                 ? 'রফিকুল ইসলাম স্যার'
-                : 'আবরার ফাইয়াজ (রোল ১০১)'}
+                : 'আবরার ফাইয়াজ (রোল ১০১)')}
             </span>
             <span className="user-role-sub">
-              {currentRole === 'admin' ? 'সুপার অ্যাডমিন' : currentRole === 'teacher' ? 'ফ্যাকাল্টি' : 'বিজ্ঞান বিভাগ'}
+              {currentUser?.roleTitle || (currentRole === 'admin' ? 'সুপার অ্যাডমিন' : currentRole === 'teacher' ? 'ফ্যাকাল্টি' : 'বিজ্ঞান বিভাগ')}
             </span>
           </div>
           <ChevronRight size={14} color="var(--text-muted)" />

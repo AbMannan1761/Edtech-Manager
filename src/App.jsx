@@ -15,6 +15,7 @@ import { ExamManagement } from './components/exams/ExamManagement';
 import { StaffManagement } from './components/staff/StaffManagement';
 import { SettingsView } from './components/settings/SettingsView';
 import { RegisterWizardModal } from './components/auth/RegisterWizardModal';
+import { LoginModal } from './components/auth/LoginModal';
 
 const MainLayout = () => {
   const { activeTab } = useApp();
@@ -46,6 +47,7 @@ const MainLayout = () => {
       <StudentProfileModal />
       <MoneyReceiptModal />
       <RegisterWizardModal />
+      <LoginModal />
     </div>
   );
 };

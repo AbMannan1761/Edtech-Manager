@@ -63,6 +63,19 @@ export const AppProvider = ({ children }) => {
   const [settings, setSettings] = useState(initialSettings);
 
   // Modals state
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => localStorage.getItem('eduone_logged_in') !== 'false');
+  const [currentUser, setCurrentUser] = useState(() => {
+    const saved = localStorage.getItem('eduone_user');
+    return saved ? JSON.parse(saved) : {
+      name: 'জাহিদ হাসান',
+      role: 'admin',
+      roleTitle: 'সুপার অ্যাডমিন',
+      phone: '01711-223344',
+      email: 'admin@edtech.com',
+      avatar: 'JH'
+    };
+  });
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const [isAddStudentModalOpen, setIsAddStudentModalOpen] = useState(false);
   const [isFeeCounterOpen, setIsFeeCounterOpen] = useState(false);
@@ -118,6 +131,22 @@ export const AppProvider = ({ children }) => {
   // Translation helper
   const t = (key) => {
     return translations[language]?.[key] || translations['bn']?.[key] || key;
+  };
+
+  // Auth Actions
+  const login = (user) => {
+    setIsLoggedIn(true);
+    setCurrentUser(user);
+    if (user.role) {
+      setCurrentRole(user.role);
+    }
+    localStorage.setItem('eduone_logged_in', 'true');
+    localStorage.setItem('eduone_user', JSON.stringify(user));
+  };
+
+  const logout = () => {
+    setIsLoggedIn(false);
+    localStorage.setItem('eduone_logged_in', 'false');
   };
 
   // Student Actions
@@ -314,6 +343,12 @@ export const AppProvider = ({ children }) => {
         sendSms,
         addExam,
         updateExamMarks,
+        isLoginModalOpen,
+        setIsLoginModalOpen,
+        isLoggedIn,
+        currentUser,
+        login,
+        logout,
         isRegisterModalOpen,
         setIsRegisterModalOpen,
         isAddStudentModalOpen,

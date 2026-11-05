@@ -108,6 +108,22 @@ export const translations = {
     deleteBatchConfirmTitle: "ব্যাচ ডিলিট নিশ্চিতকরণ",
     archiveBatchConfirmTitle: "ব্যাচ আর্কাইভ নিশ্চিতকরণ",
 
+    // Auth & Login
+    login: "লগ ইন",
+    logout: "লগ আউট",
+    loginTitle: "এডটেক ম্যানেজার - লগ ইন",
+    loginSubtitle: "আপনার অ্যাকাউন্টে প্রবেশ করতে সঠিক তথ্য দিন",
+    loginPhoneOrEmail: "মোবাইল নম্বর বা ইমেইল",
+    loginPassword: "পাসওয়ার্ড",
+    rememberMe: "পাসওয়ার্ড মনে রাখুন",
+    forgotPassword: "পাসওয়ার্ড ভুলে গেছেন?",
+    btnLoginSubmit: "লগ ইন করুন",
+    quickDemoLogin: "⚡ দ্রুত ডেমো লগইন",
+    demoAdmin: "অ্যাডমিন ডেমো",
+    demoTeacher: "শিক্ষক ডেমো",
+    demoStudent: "শিক্ষার্থী ডেমো",
+    loggedInAs: "লগইনকৃত অ্যাকাউন্ট:",
+
     // Attendance Module
     attendanceTitle: "দৈনিক ব্যাচভিত্তিক হাজিরা",
     attendanceSubtitle: "শিক্ষার্থীদের উপস্থিতি নিশ্চিত করুন ও স্বয়ংক্রিয় এসএমএস পাঠান",
@@ -282,6 +298,22 @@ export const translations = {
     deleteBatch: "Delete",
     deleteBatchConfirmTitle: "Confirm Batch Deletion",
     archiveBatchConfirmTitle: "Confirm Batch Archive",
+
+    // Auth & Login
+    login: "Log In",
+    logout: "Log Out",
+    loginTitle: "Edtech Manager - Log In",
+    loginSubtitle: "Enter your credentials to access your portal",
+    loginPhoneOrEmail: "Phone Number or Email",
+    loginPassword: "Password",
+    rememberMe: "Remember me",
+    forgotPassword: "Forgot password?",
+    btnLoginSubmit: "Sign In",
+    quickDemoLogin: "⚡ Quick Demo Login",
+    demoAdmin: "Admin Demo",
+    demoTeacher: "Teacher Demo",
+    demoStudent: "Student Demo",
+    loggedInAs: "Logged in as:",
 
     // Attendance Module
     attendanceTitle: "Batch Attendance",
