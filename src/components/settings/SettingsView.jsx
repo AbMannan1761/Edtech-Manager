@@ -11,6 +11,7 @@ import {
   Sparkles,
   RefreshCw
 } from 'lucide-react';
+import { DatabaseSyncSettings } from './DatabaseSyncSettings';
 
 export const SettingsView = () => {
   const { settings, setSettings, t, setIsRegisterModalOpen } = useApp();
@@ -196,6 +197,9 @@ export const SettingsView = () => {
           </div>
         </div>
       </div>
+
+      {/* Cloud Database & Sync Management Section */}
+      <DatabaseSyncSettings />
     </div>
   );
 };

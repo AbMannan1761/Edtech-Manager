@@ -432,3 +432,4 @@ export const LoginModal = () => {
     </div>
   );
 };
+
